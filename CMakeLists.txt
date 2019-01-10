@@ -3,3 +3,7 @@ project(micropather)
 
 add_library(micropather micropather.cpp micropather.h)
 target_include_directories(micropather PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+install(TARGETS micropather
+        RUNTIME DESTINATION bin
+        ARCHIVE DESTINATION lib)
